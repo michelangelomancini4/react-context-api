@@ -10,8 +10,15 @@ import ProductsContext from './contexts/ProductsContext';
 // importo lista da productspage
 import ProductsPage from "./pages/ProductsPage";
 
+// Pagine principali del sito B
+import Contacts from "./pages/ContactsPage";
+import ChiSiamoPage from "./pages/ChiSiamoPage";
+import NavBar from './components/Navbar';
+
+
 import './App.css'
 // import Prodotti from './components/ProductsList';
+// import dell NavBar
 
 function App() {
   const [prodotti, setProdotti] = useState([]);
@@ -25,8 +32,11 @@ function App() {
   return (
     <ProductsContext.Provider value={prodotti}>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<ProductsPage />} />
+          <Route path="/chisiamo" element={<ChiSiamoPage />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </BrowserRouter>
     </ProductsContext.Provider>

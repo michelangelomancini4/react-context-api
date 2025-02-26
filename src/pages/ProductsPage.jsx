@@ -6,7 +6,12 @@ function ProductsPage() {
 
     return (
         // output in pagina
-        <ProductsList />
+        <>
+            <h2>I NOSTRI PIATTI:</h2>
+
+            <ProductsList />
+        </>
+
     );
 }
 
